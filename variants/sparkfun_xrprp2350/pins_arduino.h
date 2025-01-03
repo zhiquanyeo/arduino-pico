@@ -39,4 +39,6 @@
 #define RP2350_PSRAM_CS         (8u)
 #define RP2350_PSRAM_MAX_SCK_HZ (109*1000*1000)
 
+#define PICO_RP2350B 1
+
 #include "../generic/common.h"
