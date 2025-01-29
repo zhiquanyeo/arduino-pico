@@ -22,7 +22,7 @@
 
 extern "C" void initVariant() {
     // REG_ON, DATA_OUT, DATA_IN, HOST_WAKE, CLOCK, CS
-    static uint cyw43_pin_array[CYW43_PIN_INDEX_WL_COUNT] = {12, 35, 35, 35, 34, 33};
+    static uint cyw43_pin_array[CYW43_PIN_INDEX_WL_COUNT] = {26, 29, 29, 29, 28, 27};
     cyw43_set_pins_wl(cyw43_pin_array);
     init_cyw43_wifi();
 }
