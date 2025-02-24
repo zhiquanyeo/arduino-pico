@@ -249,7 +249,7 @@ def BuildHeader(name, chip, chaintuple, chipoptions, vendor_name, product_name, 
     print("%s.build.board=%s" % (name, boarddefine))
 
     if chip == "rp2040":  # RP2350 has menu for this later on
-        print("%s.build.mcu=cortex-m0plus" % (name))        
+        print("%s.build.mcu=cortex-m0plus" % (name))
         print("%s.build.chip=%s" % (name, chip))
         print("%s.build.toolchain=%s" % (name, chaintuple))
         print("%s.build.toolchainpkg=%s" % (name, "pqt-gcc"))
@@ -340,7 +340,7 @@ def MakeBoard(name, chip, vendor_name, product_name, vid, pid, pwr, boarddefine,
         BuildFlashMenu(name, chip, 2*1024*1024, [0, 1*1024*1024])
         BuildFlashMenu(name, chip, 8*1024*1024, [0, 7*1024*1024, 4*1024*1024, 2*1024*1024])
         BuildFlashMenu(name, chip, 16*1024*1024, [0, 15*1024*1024, 14*1024*1024, 12*1024*1024, 8*1024*1024, 4*1024*1024, 2*1024*1024])
-    elif (name == "challenger_2350_wifi6_ble5") or (name == "challenger_2040_wifi_ble"):        
+    elif (name == "challenger_2350_wifi6_ble5") or (name == "challenger_2040_wifi_ble"):
         BuildWifiType(name)
         BuildCountry(name)
         BuildFlashMenu(name, chip, 8*1024*1024, [0, 7*1024*1024, 4*1024*1024, 2*1024*1024])
@@ -539,7 +539,7 @@ MakeBoard("breadstick_raspberry", "rp2040", "Breadstick", "Raspberry", "0x2e8a",
 # BridgeTek
 MakeBoard("bridgetek_idm2040_7a", "rp2040", "BridgeTek", "IDM2040-7A", "0x2e8a", "0x1041", 250, "BRIDGETEK_IDM2040_7A", 8, 0, "boot2_w25q080_2_padded_checksum", ["FT8XX_TYPE=BT817", "DISPLAY_RES=WVGA", "PLATFORM_RP2040"])
 MakeBoard("bridgetek_idm2040_43a", "rp2040", "BridgeTek", "IDM2040-43A", "0x2e8b", "0xf00a", 250, "BRIDGETEK_IDM2040_43A", 8, 0, "boot2_w25q080_2_padded_checksum", ["FT8XX_TYPE=BT883", "DISPLAY_RES=WQVGA", "PLATFORM_RP2040"])
- 
+
 # Cytron
 MakeBoard("cytron_iriv_io_controller", "rp2350", "Cytron", "IRIV IO Controller", "0x2e8a", "0x1093", 250, "CYTRON_IRIV_IO_CONTROLLER", 2, 0, "none")
 MakeBoard("cytron_maker_nano_rp2040", "rp2040", "Cytron", "Maker Nano RP2040", "0x2e8a", "0x100f", 250, "CYTRON_MAKER_NANO_RP2040", 2, 0, "boot2_w25q080_2_padded_checksum")
@@ -652,6 +652,8 @@ MakeBoard("sparkfun_promicrorp2350", "rp2350", "SparkFun", "ProMicro RP2350", "0
 MakeBoard("sparkfun_thingplusrp2040", "rp2040", "SparkFun", "Thing Plus RP2040", "0x1b4f", "0x0026", 250, "SPARKFUN_THINGPLUS_RP2040", 16, 0, "boot2_w25q080_2_padded_checksum")
 MakeBoard("sparkfun_thingplusrp2350", "rp2350", "SparkFun", "Thing Plus RP2350", "0x1b4f", "0x0038", 250, "SPARKFUN_THINGPLUS_RP2350", 16, 8, "none", ["PICO_CYW43_SUPPORTED=1", "CYW43_PIN_WL_DYNAMIC=1"])
 MakeBoard("sparkfun_xrprp2350", "rp2350", "SparkFun", "XRP RP2350", "0x1b4f", "0x0038", 250, "SPARKFUN_XRP_RP2350", 16, 8, "none", ["PICO_CYW43_SUPPORTED=1", "CYW43_PIN_WL_DYNAMIC=1"])
+MakeBoard("sparkfun_iotnode_lorawanrp2350", "rp2350", "SparkFun", "IoT Node LoRaWAN", "0x1b4f", "0x0044", 250, "SPARKFUN_IOTNODE_LORAWAN_RP2350", 16, 8, "none")
+MakeBoard("sparkfun_xrp_controller_beta", "rp2040", "SparkFun", "XRP Controller (Beta)", "0x1b4f", "0x0045", 250, "SPARKFUN_XRP_CONTROLLER_BETA", 2, 0, "boot2_w25q080_2_padded_checksum", ["PICO_CYW43_SUPPORTED=1", "CYW43_PIN_WL_DYNAMIC=1"])
 
 # Seeed
 MakeBoard("seeed_indicator_rp2040", "rp2040", "Seeed", "INDICATOR RP2040", "0x2886", "0x0050", 250, "SEEED_INDICATOR_RP2040", 2, 0, "boot2_w25q080_2_padded_checksum")
