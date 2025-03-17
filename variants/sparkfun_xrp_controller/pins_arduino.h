@@ -1,6 +1,7 @@
 #pragma once
 
 #define PICO_RP2350A 0
+#define PICO_RP2350B 1
 
 #include <cyw43_wrappers.h>
 
